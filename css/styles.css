@@ -1,3 +1,9 @@
-body {
-    background: gold;
+:root {
+    --color-uxPrimary: #3A405A;
+    --color-uxSecondary: #94BFA7;
+    --color-uxAccent: #FFF;
+    --color-devPrimary: #94BFA7;
+    --color-devSecondary: #3A405A;
+    --color-devAccent: #262626;
+    --color-portfolio: #000;
 }
