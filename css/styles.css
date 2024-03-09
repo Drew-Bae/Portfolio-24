@@ -7,3 +7,51 @@
     --color-devAccent: #262626;
     --color-portfolio: #000;
 }
+
+html {
+    /* This is equvalent to 10px or 1rem */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: black;
+}
+
+.ux {
+    color: var(--color-uxAccent);
+}
+
+.web {
+    color: var(--color-devAccent);
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    /* Sometimes the fontstyle has built in margins so we should reduce the bottom margin to match the design as we see fit. */
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 4.778rem;
+        margin-bottom: 1.7rem;
+    }
+
+    h2 {
+        font-size: 3.318rem;
+        margin-bottom: 0rem;
+    }
+}
