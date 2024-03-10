@@ -8,6 +8,8 @@
     --color-portfolio: #000;
 }
 
+/* Typography */
+
 html {
     /* This is equvalent to 10px or 1rem */
     font-size: 62.5%;
@@ -53,5 +55,73 @@ p {
     h2 {
         font-size: 3.318rem;
         margin-bottom: 0rem;
+    }
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.link-mobile {
+    color: black;
+    font-size: 3.2rem;
+    margin-left: 2rem;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+  
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2.5px;
+    bottom: 4px;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.link-active {
+    display: inline-block;
+    position: relative;
+}
+
+.link-active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 2.5px;
+    bottom: 4px;
+    left: 0;
+    background-color: black;
+}
+
+@media screen and (min-width: 1024px) {
+    a {
+        color: var(--color-devAccent);
+        font-size: 3.244rem;
+    }
+
+    .link-mobile {
+        display: none;
+    }
+
+    .link-active::after {
+        height: 2px;
+        bottom: 5px;
     }
 }
