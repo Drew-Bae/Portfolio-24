@@ -207,3 +207,54 @@ a {
         height: 64px;
     }
 }
+
+/* Container */
+.container {
+    --b: 2px; /* Border thickness */
+    --s: 20px; /* Length of corner */
+    --g: 20px; /* Gap between content and border */
+    --c: black;
+
+    padding: calc(var(--b) + var(--g));
+    background-image: 
+        conic-gradient(from 90deg at top var(--b) left var(--b), #0000 25%, var(--c) 0),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), #0000 25%, var(--c) 0);
+    background-position: 
+        var(--_p, 0%) var(--_p, 0%),
+        calc(100% - var(--_p, 0%)) calc(100% - var(--_p, 0%));
+    background-size: var(--s) var(--s);
+    background-repeat: no-repeat;
+
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: all 1s;
+    /*animation: role 1s forwards .3s;*/
+}
+
+.container p {
+    margin: 0;
+}
+
+.show {
+    width: 150px;
+    height: 134px;
+}
+
+/*
+@keyframes role {
+    from {
+        width: 0px;
+        height: 0px;
+    }
+    to {
+        width: 150px;
+        height: 134px;
+    }
+}
+*/
+
+.container:active {
+    width: 150px;
+    height: 134px;
+}
