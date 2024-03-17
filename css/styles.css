@@ -232,13 +232,71 @@ a {
     /*animation: role 1s forwards .3s;*/
 }
 
-.container p {
+.container span {
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    font-weight: 700;
 }
 
 .show {
     width: 150px;
-    height: 134px;
+    height: 53px;
+}
+
+.show span {
+    opacity: 1;
+}
+
+.outer-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.inner-heading {
+    border: 0px solid #ddd;
+    height: 2.6rem;
+    overflow: hidden;
+}
+
+.rotate {
+    position: relative;
+    animation: spin 8s ease infinite;
+}
+
+@keyframes spin {
+    0%,
+    100% {
+        top: 0;
+    }    
+    20% {
+        top: 0;
+    }
+    25% {
+        top: -2.7rem;
+    }
+    45% {
+        top: -2.7rem;
+    }
+    50% {
+        top: -5.4rem;
+    }
+    70% {
+        top: -5.4rem;
+    }
+    75% {
+        top: -8.1rem;
+    }
+    95% {
+        top: -8.1rem;
+    }
 }
 
 /*
@@ -253,8 +311,3 @@ a {
     }
 }
 */
-
-.container:active {
-    width: 150px;
-    height: 134px;
-}
