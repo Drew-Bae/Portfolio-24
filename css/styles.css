@@ -196,6 +196,12 @@ a {
     fill: #FF0000;
 }
 
+.hand {
+    height: 30px;
+    width: 30px;
+    transform: scaleX(-1);
+}
+
 @media screen and (min-width: 1024px) {
     .icon--functions {
         width: 50px;
@@ -205,6 +211,11 @@ a {
     .icon--social {
         width: 64px;
         height: 64px;
+    }
+
+    .hand {
+        height: 36px;
+        width: 36px;
     }
 }
 
@@ -299,15 +310,67 @@ a {
     }
 }
 
-/*
-@keyframes role {
-    from {
-        width: 0px;
-        height: 0px;
+.placeholder {
+    background-color: #3A405A;
+    height: 50vh;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+/* Buttons */
+.btn {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+
+    width: 233px;
+    height: 48px;
+
+    border: none;
+    border-radius: 10px;
+
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, .3);
+}
+
+.btn-ux {
+    color: var(--color-devAccent);
+}
+
+.btn-web {
+    color: #fff;
+    background-color: var(--color-devAccent);
+    box-shadow: rgba(0, 0, 0, .25);
+}
+
+.btn-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 63px;
+    width: 280px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, .25);
+}
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        width: 299px;
+        height: 80px;
+
+        font-size: 2.883rem;
+
+        box-shadow: 12px 12px 4px rgba(0, 0, 0, .3);
     }
-    to {
-        width: 150px;
-        height: 134px;
+
+    .btn-form {
+        height: 80px;
+        width: 299px;
+        font-size: 2.883rem;
     }
 }
-*/
