@@ -220,7 +220,7 @@ a {
 }
 
 /* Container */
-.container {
+.container, .container_email {
     --b: 2px; /* Border thickness */
     --s: 20px; /* Length of corner */
     --g: 20px; /* Gap between content and border */
@@ -243,7 +243,7 @@ a {
     /*animation: role 1s forwards .3s;*/
 }
 
-.container span {
+.container span,.container_email span {
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -421,4 +421,101 @@ a {
         font-weight: 600;
         color: #626262;
     }
+}
+
+/* Form */
+.show_email {
+    width: 280px;
+    height: 299px;
+}
+
+.show_email span {
+    opacity: 1;
+}
+
+label {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #939393;
+}
+
+/* Nav */
+nav {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+nav h1 {
+    display: inline;
+    margin: 0;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    font-size: 2.4rem;
+    color: var(--color-uxAccent);
+}
+
+nav svg {
+    margin: 0;
+    margin-top: 1.6rem;
+    margin-right: 1.6rem;
+    fill: var(--color-uxAccent);
+}
+
+/* Hero */
+.ux-hero {
+    display: grid;
+    grid-template-columns: [first] auto [line2] auto [end];
+    grid-template-rows: [row1-start] 11.9rem [row1-end] auto [third-line] auto [last-line];
+    grid-template-areas: 
+        "header content1"
+        "header content2"
+        "footer footer";
+    padding-top: 10.2rem;
+    height: calc(50vh - 10.2rem);
+    background-color: var(--color-devSecondary);
+}
+
+.webdev-hero {
+    height: 50vh;
+    background-color: var(--color-devPrimary);
+}
+
+.title-hero {
+    grid-area: header;
+    justify-self: center;
+    margin: 0;
+    margin-bottom: 4.9rem;
+    padding-right: 1rem;
+    writing-mode: vertical-lr;
+    text-wrap: nowrap;
+    transform: rotate(180deg);
+
+    font-size: 3.2rem;
+    color: var(--color-uxAccent);
+}
+
+.ux-hero p {
+    grid-area: content1;
+    margin: 0;
+    margin-left: 1rem;
+    width: 25.6rem;
+    color: var(--color-uxAccent);
+}
+
+.ux-hero button {
+    grid-area: content2;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.ux-hero svg {
+    grid-area: footer;
+    justify-self: center;
+    align-self: end;
+    fill: var(--color-devPrimary);
+    transform: rotate(180deg);
 }

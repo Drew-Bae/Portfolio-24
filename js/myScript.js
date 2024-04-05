@@ -1,13 +1,27 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
+class IntersectionObserverHandler {
+    constructor(className, showClass) {
+        this.className = className;
+        this.showClass = showClass;
+        this.observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(this.showClass);
+                } else {
+                    entry.target.classList.remove(this.showClass);
+                }
+            });
+        });
+    }
 
-const hiddenElements = document.querySelectorAll('.container');
-hiddenElements.forEach((el) => observer.observe(el));
+    observeElements() {
+        const elements = document.querySelectorAll(`.${this.className}`);
+        elements.forEach(el => this.observer.observe(el));
+    }
+}
+
+// Usage
+const containerObserver = new IntersectionObserverHandler('container', 'show');
+containerObserver.observeElements();
+
+const formObserver = new IntersectionObserverHandler('container_email', 'show_email');
+formObserver.observeElements();
