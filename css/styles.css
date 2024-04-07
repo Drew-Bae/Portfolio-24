@@ -469,13 +469,12 @@ nav svg {
 .ux-hero {
     display: grid;
     grid-template-columns: [first] auto [line2] auto [end];
-    grid-template-rows: [row1-start] 11.9rem [row1-end] auto [third-line] auto [last-line];
+    grid-template-rows: [row1-start] auto [row1-end] auto [third-line] 40px [last-line];
     grid-template-areas: 
         "header content1"
         "header content2"
         "footer footer";
-    padding-top: 10.2rem;
-    height: calc(50vh - 10.2rem);
+    padding-top: 7.6rem;
     background-color: var(--color-devSecondary);
 }
 
@@ -487,8 +486,7 @@ nav svg {
 .title-hero {
     grid-area: header;
     justify-self: center;
-    margin: 0;
-    margin-bottom: 4.9rem;
+    align-self: center;
     padding-right: 1rem;
     writing-mode: vertical-lr;
     text-wrap: nowrap;
@@ -500,6 +498,7 @@ nav svg {
 
 .ux-hero p {
     grid-area: content1;
+    align-self: center;
     margin: 0;
     margin-left: 1rem;
     width: 25.6rem;
@@ -508,8 +507,8 @@ nav svg {
 
 .ux-hero button {
     grid-area: content2;
-    margin-top: 3rem;
     margin-left: 1rem;
+
 }
 
 .ux-hero svg {
@@ -518,4 +517,11 @@ nav svg {
     align-self: end;
     fill: var(--color-devPrimary);
     transform: rotate(180deg);
+}
+
+@media screen and (min-height: 780px) {
+    .ux-hero {
+        padding-top: 10.2rem;
+        height: calc(50vh - 10.2rem);
+    }
 }
