@@ -21,6 +21,10 @@ body {
     line-height: 1.5;
     color: black;
     background-color: var(--color-devPrimary);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
 }
 
 .ux {
@@ -324,8 +328,8 @@ a {
     font-size: 2rem;
     font-weight: 700;
 
-    width: 233px;
-    height: 48px;
+    width: 64.6vw;
+    height: 6vh;
 
     border: none;
     border-radius: 10px;
@@ -444,6 +448,7 @@ label {
 /* Nav */
 nav {
     position: absolute;
+    top: 0;
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -467,6 +472,22 @@ nav svg {
 }
 
 /* Hero */
+.ux-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 50vh;
+    background-color: var(--color-uxPrimary);
+}
+
+.web-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 50vh;
+    background-color: var(--color-devPrimary);
+}
+
 .ux-hero {
     display: grid;
     grid-template-columns: [first] auto [line2] auto [end];
@@ -475,8 +496,7 @@ nav svg {
         "header content1"
         "header content2"
         "footer footer";
-    padding-top: 12rem;
-    background-color: var(--color-devSecondary);
+    padding-top: 12.8vh;
 }
 
 .webdev-hero {
@@ -502,7 +522,7 @@ nav svg {
     text-wrap: nowrap;
     transform: rotate(180deg);
 
-    font-size: 3.2rem;
+    font-size: 4vh;
     color: var(--color-uxAccent);
 }
 
@@ -512,13 +532,11 @@ nav svg {
     align-self: center;
     margin: 0;
     padding-right: 1rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
     writing-mode: vertical-lr;
     text-wrap: nowrap;
     transform: rotate(180deg);
 
-    font-size: 3.2rem;
+    font-size: 4vh;
     color: var(--color-devAccent);
 }
 
@@ -529,6 +547,8 @@ nav svg {
     margin-left: 1rem;
     width: 25.6rem;
     color: var(--color-uxAccent);
+    
+    font-size: 2vh;
 }
 
 .webdev-hero p {
@@ -536,23 +556,24 @@ nav svg {
     align-self: center;
     margin: 0;
     margin-left: 1rem;
-    margin-top: 4.9rem;
+    margin-top: 7.35vh;
     width: 25.6rem;
     color: var(--color-devAccent);
+
+    font-size: 2vh;
 }
 
 .ux-hero button {
     grid-area: content2;
     margin-left: 1rem;
     margin-top: 3rem;
-    margin-bottom: 6.1rem;
+    margin-bottom: 7.65vh;
 }
 
 .webdev-hero button {
     grid-area: content2;
     margin-left: 1rem;
     margin-top: 3rem;
-    margin-bottom: 6.1rem;
 }
 
 .ux-hero svg {
@@ -568,21 +589,4 @@ nav svg {
     justify-self: center;
     align-self: start;
     fill: var(--color-devSecondary);
-}
-
-@media screen and (min-height: 780px) {
-    .ux-hero {
-        padding-top: 10.2rem;
-        height: calc(50vh - 10.2rem);
-    }
-}
-
-@media screen and (min-height: 873px) {
-    .ux-hero p {
-        margin-top: 1.5rem;
-    }
-
-    .webdev-hero p {
-        margin-top: 7.6rem;
-    }
 }
