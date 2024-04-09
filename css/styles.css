@@ -20,6 +20,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     color: black;
+    background-color: var(--color-devPrimary);
 }
 
 .ux {
@@ -469,24 +470,33 @@ nav svg {
 .ux-hero {
     display: grid;
     grid-template-columns: [first] auto [line2] auto [end];
-    grid-template-rows: [row1-start] auto [row1-end] auto [third-line] 40px [last-line];
+    grid-template-rows: [row1-start] auto [row1-end] 1fr [third-line] 40px [last-line];
     grid-template-areas: 
         "header content1"
         "header content2"
         "footer footer";
-    padding-top: 7.6rem;
+    padding-top: 12rem;
     background-color: var(--color-devSecondary);
 }
 
 .webdev-hero {
     height: 50vh;
+    display: grid;
+    grid-template-columns: [first] auto [line2] auto [end];
+    grid-template-rows: [row1-start] 40px [row1-end] auto [third-line] 1fr [last-line];
+    grid-template-areas: 
+        "footer footer"
+        "header content1"
+        "header content2";
     background-color: var(--color-devPrimary);
 }
 
-.title-hero {
+.title-hero-ux {
     grid-area: header;
     justify-self: center;
     align-self: center;
+    margin: 0;
+    margin-bottom: 6rem;
     padding-right: 1rem;
     writing-mode: vertical-lr;
     text-wrap: nowrap;
@@ -494,6 +504,22 @@ nav svg {
 
     font-size: 3.2rem;
     color: var(--color-uxAccent);
+}
+
+.title-hero-web {
+    grid-area: header;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    writing-mode: vertical-lr;
+    text-wrap: nowrap;
+    transform: rotate(180deg);
+
+    font-size: 3.2rem;
+    color: var(--color-devAccent);
 }
 
 .ux-hero p {
@@ -505,10 +531,28 @@ nav svg {
     color: var(--color-uxAccent);
 }
 
+.webdev-hero p {
+    grid-area: content1;
+    align-self: center;
+    margin: 0;
+    margin-left: 1rem;
+    margin-top: 4.9rem;
+    width: 25.6rem;
+    color: var(--color-devAccent);
+}
+
 .ux-hero button {
     grid-area: content2;
     margin-left: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 6.1rem;
+}
 
+.webdev-hero button {
+    grid-area: content2;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 6.1rem;
 }
 
 .ux-hero svg {
@@ -519,9 +563,26 @@ nav svg {
     transform: rotate(180deg);
 }
 
+.webdev-hero svg {
+    grid-area: footer;
+    justify-self: center;
+    align-self: start;
+    fill: var(--color-devSecondary);
+}
+
 @media screen and (min-height: 780px) {
     .ux-hero {
         padding-top: 10.2rem;
         height: calc(50vh - 10.2rem);
+    }
+}
+
+@media screen and (min-height: 873px) {
+    .ux-hero p {
+        margin-top: 1.5rem;
+    }
+
+    .webdev-hero p {
+        margin-top: 7.6rem;
     }
 }
