@@ -484,6 +484,28 @@ nav svg {
     z-index: 1;
 }
 
+.custom-list {
+    height: 100vh;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.7rem;
+    padding-inline-start: 2rem;
+
+    list-style-type: none;
+    font-size: 3.2rem;
+    line-height: normal;
+}
+
+.custom-list a:link {
+    color: #000;
+}
+
+.custom-list a:visited {
+    color: #000;
+}
+
 /* Hero */
 .ux-background {
     display: flex;

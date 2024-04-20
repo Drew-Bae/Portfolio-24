@@ -42,7 +42,7 @@ function toggleContent() {
   if (!isChanged) {
     // Change icon to close
     icon.setAttribute("xlink:href", "images/sprite.svg#close");
-    icon.style.fill = "red";
+    icon.style.fill = "black";
 
     // Container to fill the whole space
     var newContainer = document.createElement("section");
@@ -56,6 +56,8 @@ function toggleContent() {
     var link1 = document.createElement("a");
     link1.innerHTML = "HOME";
     link1.href = "#";
+    link1.style.textDecoration = "underline 2px";
+    link1.style.textUnderlineOffset = "5px";
     listItem1.appendChild(link1);
     var listItem2 = document.createElement("li");
     var link2 = document.createElement("a");
@@ -74,7 +76,7 @@ function toggleContent() {
     listItem4.appendChild(link4);
     var listItem5 = document.createElement("li");
     var link5 = document.createElement("a");
-    link5.innerHTML = "WEB DEVELOPMENT";
+    link5.innerHTML = "WEB <br/> DEVELOPMENT";
     link5.href = "#";
     listItem5.appendChild(link5);
 
