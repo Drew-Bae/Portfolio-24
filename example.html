@@ -3,108 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Element Change</title>
-    <style>
-      /* Some basic styling for demonstration */
-      svg {
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        margin-bottom: 10px; /* Add margin below SVG */
-      }
-
-      .custom-paragraph {
-        font-style: italic;
-        color: #333; /* Darker text color */
-      }
-
-      .custom-list {
-        list-style-type: circle; /* Change list style to circles */
-      }
-    </style>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Dosis:wght@700&family=Gluten:wght@300&family=Inter:wght@100..900&family=K2D:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/myScript.js"></script>
   </head>
   <body>
-    <!-- Initial HTML element -->
-    <div id="dynamicContainer">
-      <h1>This is an h1 element</h1>
-    </div>
-
-    <!-- SVG to trigger the change -->
-    <svg
-      onclick="toggleContent()"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path
-        d="M15 3H5a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2zm0 0h0"
-      ></path>
-      <path d="M10 17l5-5-5-5"></path>
-    </svg>
-
-    <script>
-      var originalContent = ""; // Variable to store original HTML content
-      var isChanged = false; // Variable to track the state of the content
-
-      window.onload = function () {
-        // Store the original HTML content when the page loads
-        originalContent = document.getElementById("dynamicContainer").innerHTML;
-      };
-
-      function toggleContent() {
-        var container = document.getElementById("dynamicContainer");
-
-        if (!isChanged) {
-          // Create a new button element
-          var newButton = document.createElement("button");
-          newButton.innerHTML = "This is a button";
-
-          // Apply styles to the button
-          newButton.style.padding = "10px";
-          newButton.style.backgroundColor = "#007bff";
-          newButton.style.color = "white";
-          newButton.style.border = "none";
-          newButton.style.cursor = "pointer";
-          newButton.style.marginBottom = "10px"; // Add margin below button
-
-          // Create a new paragraph element
-          var newParagraph = document.createElement("p");
-          newParagraph.innerHTML = "This is a paragraph element";
-
-          // Apply a custom class to the paragraph
-          newParagraph.classList.add("custom-paragraph");
-
-          // Create a new list element
-          var newList = document.createElement("ul");
-          newList.classList.add("custom-list"); // Apply a custom class to the list
-
-          var listItem1 = document.createElement("li");
-          listItem1.innerHTML = "List item 1";
-          var listItem2 = document.createElement("li");
-          listItem2.innerHTML = "List item 2";
-          newList.appendChild(listItem1);
-          newList.appendChild(listItem2);
-
-          // Replace the content inside the container
-          container.innerHTML = ""; // Clear existing content
-          container.appendChild(newButton);
-          container.appendChild(newParagraph);
-          container.appendChild(newList);
-
-          // Update state
-          isChanged = true;
-        } else {
-          // Restore the original HTML content
-          container.innerHTML = originalContent;
-
-          // Update state
-          isChanged = false;
-        }
-      }
-    </script>
+    <nav>
+      <span id="dynamicNavContainer">
+        <h1>Drew Bae</h1>
+      </span>
+      <svg onclick="toggleContent()" class="icon--functions">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+      <section class="open-nav">
+        <ul class="custom-list">
+          <li>HOME</li>
+          <li>ABOUT</li>
+          <li>CONTACT</li>
+          <li>UX DESIGN</li>
+          <li>WEB DEVELOPMENT</li>
+        </ul>
+      </section>
+    </nav>
   </body>
 </html>

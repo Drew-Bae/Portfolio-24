@@ -1,0 +1,188 @@
+:root {
+    --color-uxPrimary: #3A405A;
+    --color-uxSecondary: #94BFA7;
+    --color-uxAccent: #FFF;
+    --color-devPrimary: #94BFA7;
+    --color-devSecondary: #3A405A;
+    --color-devAccent: #262626;
+    --color-portfolio: #000;
+}
+
+::view-transition-group(root) {
+    animation-duration: 5s;
+}
+
+/* Typography */
+html {
+    /* This is equivalent to 10px or 1rem */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: black;
+
+    /* When overscrolling this covers for it */
+    background-color: var(--color-devPrimary);
+
+    /* This should fix the bug where the white background makes it look smaller */
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+}
+
+/* Icons (svg) */
+.icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+    width: 64.6vw;
+    height: 6vh;
+
+    border: none;
+    border-radius: 10px;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, .3);
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.btn-ux {
+    color: var(--color-devAccent);
+}
+
+.btn-webdev {
+    color: white;
+    background-color: var(--color-devAccent);
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+nav h1 {
+    margin: 0;
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+    font-size: 2.4rem;
+    color: white;
+}
+
+nav a {
+    margin-top: 1.6rem;
+    margin-right: 1.6rem;
+
+    fill: white;
+}
+
+/* Section UX Design */
+.section-container {
+    height: 50vh;
+    display: grid;
+}
+
+.section-ux {
+    height: calc(50vh - 12.8vh);
+    padding-top: 12.8vh;
+
+    grid-template-columns: [first] auto [line2] auto [end];
+    grid-template-rows: [row1-start] auto [row1-end] 1fr [third-line] 40px [last-line];
+    grid-template-areas: 
+        "title description"
+        "title button"
+        "icon icon";
+
+    background-color: var(--color-uxPrimary);
+}
+
+.section-webdev {
+    grid-template-columns: [first] auto [line2] auto [end];
+    grid-template-rows: [row1-start] 40px [row1-end] auto [third-line] 1fr [last-line];
+    grid-template-areas: 
+        "icon icon"
+        "title description"
+        "title button";
+
+    background-color: var(--color-devPrimary);
+}
+
+.section-container h1 { /* Class or is this fine? */
+    margin: 0;
+    padding-right: 1rem;
+    justify-self: center;
+    align-self: center;
+
+    grid-area: title;
+
+    font-size: 4vh;
+    writing-mode: vertical-lr;
+    text-wrap: nowrap;
+    transform: rotate(180deg);
+}
+
+.section-ux h1 {
+    margin-bottom: 6rem; /* DOUBLE CHECK THIS */
+    color: var(--color-uxAccent);
+}
+
+.section-webdev h1 {
+    margin-bottom: 4rem;
+    color: var(--color-devAccent);
+}
+
+.section-container p { /* Class or is this fine? */
+    width: 25.6rem;
+    margin: 0;
+    margin-left: 1rem;
+    align-self: center;
+
+    grid-area: description;
+
+    font-size: 2vh;
+}
+
+.section-ux p {
+    color: var(--color-uxAccent);
+}
+
+.section-webdev p {
+    margin-top: 6.35vh;
+    color: var(--color-devAccent);
+}
+
+.section-container button { /* Class or is this fine? */
+    margin-left: 1rem;
+    margin-top: 3rem;
+
+    grid-area: button;
+}
+
+.section-container svg { /* Class or is this fine? */
+    justify-self: center;
+    align-self: center;
+
+    grid-area: icon;
+}
+
+.section-ux svg {
+    transform: rotate(180deg);
+    fill: var(--color-devPrimary);
+}
+
+.section-webdev svg {
+    fill: var(--color-devSecondary);
+}
