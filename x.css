@@ -62,6 +62,25 @@ body {
     background-color: var(--color-devAccent);
 }
 
+/* Links */
+a {
+    text-decoration: none;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
 /* Header */
 header {
     position: absolute;
