@@ -48,5 +48,5 @@ class IntersectionObserverHandler {
 const containerObserver = new IntersectionObserverHandler('container', 'show');
 containerObserver.observeElements();
 
-const formObserver = new IntersectionObserverHandler('container_email', 'show_email');
-formObserver.observeElements();
+const myMissionObserver = new IntersectionObserverHandler('container-mission', 'show-mission');
+myMissionObserver.observeElements();

@@ -33,6 +33,10 @@ body {
     -o-font-smoothing: antialiased;
 }
 
+p {
+    margin: 0;
+}
+
 /* Icons (svg) */
 .icon {
     width: 40px;
@@ -80,6 +84,108 @@ a:hover {
 a:focus {
     text-decoration: underline;
 }
+
+/* Containers */
+.container, .container-mission {
+    --b: 2px; /* Border thickness */
+    --s: 20px; /* Length of corner */
+    --g: 10px; /* Gap between content and border */
+    --c: black;
+
+    padding: calc(var(--b) + var(--g));
+    background-image: 
+        conic-gradient(from 90deg at top var(--b) left var(--b), #0000 25%, var(--c) 0),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), #0000 25%, var(--c) 0);
+    background-position: 
+        var(--_p, 0%) var(--_p, 0%),
+        calc(100% - var(--_p, 0%)) calc(100% - var(--_p, 0%));
+    background-size: var(--s) var(--s);
+    background-repeat: no-repeat;
+
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: all 1s;
+    /*animation: role 1s forwards .3s;*/
+}
+
+.container span,.container-mission span {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    font-weight: 700;
+}
+
+.show {
+    width: 150px;
+    height: 53px;
+}
+
+.show span {
+    opacity: 1;
+}
+
+/* my mission. You will need to create a unique class for each new container and also make sure to update the JS code. */
+.show-mission {
+    height: 283px;
+    width: 296px;
+}
+
+.show-mission span {
+    opacity: 1;
+}
+
+.outer-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.inner-heading {
+    border: 0px solid #ddd;
+    height: 2.6rem;
+    overflow: hidden;
+}
+
+.rotate {
+    position: relative;
+    animation: spin 8s ease infinite;
+}
+
+@keyframes spin {
+    0%,
+    100% {
+        top: 0;
+    }    
+    20% {
+        top: 0;
+    }
+    25% {
+        top: -2.7rem;
+    }
+    45% {
+        top: -2.7rem;
+    }
+    50% {
+        top: -5.4rem;
+    }
+    70% {
+        top: -5.4rem;
+    }
+    75% {
+        top: -8.1rem;
+    }
+    95% {
+        top: -8.1rem;
+    }
+}
+
 
 /* Header */
 header {
@@ -149,7 +255,7 @@ nav ul {
     line-height: normal;
 }
 
-/* Section UX Design */
+/* Index Page */
 .section-container {
     height: 50vh;
     display: grid;
@@ -245,4 +351,62 @@ nav ul {
 
 .section-webdev svg {
     fill: var(--color-devSecondary);
+}
+
+/* About Page */
+#aboutPageBody {
+    background-color: white;
+}
+
+#aboutPageHeader {
+    height: 71px;
+
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+#aboutPageHeader h1 {
+    color: black;
+}
+
+#aboutPageHeader svg {
+    fill: black;
+}
+
+#aboutPageMain {
+    margin-top: 71.8px;
+}
+
+#aboutPageMain section {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#aboutPageMain h1 {
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    font-size: 2rem;
+}
+
+.mobile-profile {
+    height: 140px;
+    width: 140px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+#role {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }

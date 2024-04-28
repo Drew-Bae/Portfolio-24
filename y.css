@@ -1,0 +1,96 @@
+/* Header */
+:root {
+    --color-uxPrimary: #3A405A;
+    --color-uxSecondary: #94BFA7;
+    --color-uxAccent: #FFF;
+    --color-devPrimary: #94BFA7;
+    --color-devSecondary: #3A405A;
+    --color-devAccent: #262626;
+    --color-portfolio: #000;
+}
+
+::view-transition-group(root) {
+    animation-duration: 5s;
+}
+
+/* Typography */
+html {
+    /* This is equivalent to 10px or 1rem */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: black;
+
+    /* When overscrolling this covers for it */
+    background-color: var(--color-devPrimary);
+
+    /* This should fix the bug where the white background makes it look smaller */
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+}
+
+/* Icons (svg) */
+.icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+    font-size: 2.4rem;
+    color: white;
+}
+
+header a {
+    margin-top: 1.6rem;
+    margin-right: 1.6rem;
+
+    fill: white;
+}
+
+
+/* About Page */
+#aboutPageBody {
+    background-color: white;
+}
+
+#aboutPageHeader {
+    height: 71px;
+
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+#aboutPageHeader h1 {
+    color: black;
+}
+
+#aboutPageHeader svg {
+    fill: black;
+}
+
+.mobile-profile {
+    height: 160px;
+    width: 160px;
+    object-fit: fill;
+    border-radius: 10px;
+}
