@@ -50,3 +50,6 @@ containerObserver.observeElements();
 
 const myMissionObserver = new IntersectionObserverHandler('container-mission', 'show-mission');
 myMissionObserver.observeElements();
+
+const myAbilityObserver = new IntersectionObserverHandler('container-ability', 'show-ability');
+myAbilityObserver.observeElements();
