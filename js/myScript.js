@@ -9,6 +9,13 @@ onLinkNavigate(async ({ toPath }) => {
     // or using a framework.
     // innerHTML is used here just to keep the DOM update super simple.
     document.body.innerHTML = content;  
+    
+    // Add page reload logic here
+    if (toPath.endsWith("about.html")) {
+      setTimeout(() => {
+        location.reload();
+      }, 2000); // Reload after 3 seconds
+    }
   });
 });
 
@@ -23,6 +30,7 @@ function startViewTransition(callback) {
   
   document.startViewTransition(callback);
 }
+
 class IntersectionObserverHandler {
     constructor(className, showClass) {
         this.className = className;
