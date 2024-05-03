@@ -41,6 +41,12 @@ p {
     cursor: pointer;
 }
 
+.icon-function {
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
 /* Buttons */
 .btn {
     width: 64.6vw;
@@ -83,7 +89,7 @@ a:focus {
 }
 
 /* Containers */
-.container, .container-mission, .container-ability {
+.container, .container-mission, .container-ability, .container-contact {
     --b: 2px; /* Border thickness */
     --s: 20px; /* Length of corner */
     --g: 10px; /* Gap between content and border */
@@ -109,7 +115,7 @@ a:focus {
     align-items: center;
 }
 
-.container span, .container-mission span, .container-ability span {
+.container span, .container-mission span, .container-ability span, .container-contact span {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -122,7 +128,7 @@ a:focus {
     height: 53px;
 }
 
-.show span, .show-mission span, .show-ability span {
+.show span, .show-mission span, .show-ability span, .show-contact span {
     opacity: 1;
 }
 
@@ -136,6 +142,16 @@ a:focus {
     height: 195px;
     width: 296px;
 }
+
+.show-contact {
+    height: 69px;
+    width: 69px;
+
+}
+
+.show-contact.expanded {
+    width: 153px;
+  }
 
 .outer-heading {
     display: flex;
@@ -448,4 +464,29 @@ nav ul {
 
     font-size: 16px;
     font-weight: 300;
+}
+
+/* Contact Page */
+.icon-contact {
+    width: 30px;
+    height: 30px;
+}
+
+.container-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#leftColumn {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+}
+
+#rightColumn {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
 }

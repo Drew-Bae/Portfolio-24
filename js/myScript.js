@@ -1,27 +1,40 @@
 import { getPageContent, onLinkNavigate } from './utils.js';
 
+document.addEventListener('DOMContentLoaded', function () {
+  const expandIcon = document.querySelector('.icon-function');
+  const contactContainer = document.querySelector('.container-contact');
+
+  expandIcon.addEventListener('click', function () {
+    contactContainer.classList.toggle('expanded');
+    toggleSvgIcon(expandIcon);
+  });
+});
+
+function toggleSvgIcon(icon) {
+  const useElement = icon.querySelector('use');
+  const currentHref = useElement.getAttribute('xlink:href');
+
+  if (currentHref === '../images/sprite.svg#expand-content') {
+    useElement.setAttribute('xlink:href', '../images/sprite.svg#collapse-content');
+  } else {
+    useElement.setAttribute('xlink:href', '../images/sprite.svg#expand-content');
+  }
+}
+
 onLinkNavigate(async ({ toPath }) => {
   const content = await getPageContent(toPath);
   
   startViewTransition(() => {
-    // This is a pretty heavy-handed way to update page content.
-    // In production, you'd likely be modifying DOM elements directly,
-    // or using a framework.
-    // innerHTML is used here just to keep the DOM update super simple.
     document.body.innerHTML = content;  
     
-    // Add page reload logic here
-    if (toPath.endsWith("about.html")) {
+    if (toPath.endsWith('about.html')) {
       setTimeout(() => {
         location.reload();
-      }, 2000); // Reload after 3 seconds
+      }, 2000);
     }
   });
 });
 
-
-// A little helper function like this is really handy
-// to handle progressive enhancement.
 function startViewTransition(callback) {
   if (!document.startViewTransition) {
     callback();
@@ -32,27 +45,26 @@ function startViewTransition(callback) {
 }
 
 class IntersectionObserverHandler {
-    constructor(className, showClass) {
-        this.className = className;
-        this.showClass = showClass;
-        this.observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add(this.showClass);
-                } else {
-                    entry.target.classList.remove(this.showClass);
-                }
-            });
-        });
-    }
+  constructor(className, showClass) {
+    this.className = className;
+    this.showClass = showClass;
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(this.showClass);
+        } else {
+          entry.target.classList.remove(this.showClass);
+        }
+      });
+    });
+  }
 
-    observeElements() {
-        const elements = document.querySelectorAll(`.${this.className}`);
-        elements.forEach(el => this.observer.observe(el));
-    }
+  observeElements() {
+    const elements = document.querySelectorAll(`.${this.className}`);
+    elements.forEach(el => this.observer.observe(el));
+  }
 }
 
-// Usage
 const containerObserver = new IntersectionObserverHandler('container', 'show');
 containerObserver.observeElements();
 
@@ -61,3 +73,6 @@ myMissionObserver.observeElements();
 
 const myAbilityObserver = new IntersectionObserverHandler('container-ability', 'show-ability');
 myAbilityObserver.observeElements();
+
+const myContactObserver = new IntersectionObserverHandler('container-contact', 'show-contact');
+myContactObserver.observeElements();
