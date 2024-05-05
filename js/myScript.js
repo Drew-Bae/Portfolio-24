@@ -28,7 +28,7 @@ onLinkNavigate(async ({ toPath }) => {
   startViewTransition(() => {
     document.body.innerHTML = content;  
     
-    if (toPath.endsWith('about.html')) {
+    if (toPath.endsWith('about.html') || toPath.endsWith('contact.html')) {
       setTimeout(() => {
         location.reload();
       }, 2000);
@@ -77,3 +77,6 @@ myAbilityObserver.observeElements();
 
 const myContactObserver = new IntersectionObserverHandler('container-contact', 'show-contact');
 myContactObserver.observeElements();
+
+const myFormObserver = new IntersectionObserverHandler('container-form', 'show-form');
+myFormObserver.observeElements();
