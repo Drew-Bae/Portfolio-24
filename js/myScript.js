@@ -1,5 +1,6 @@
 import { getPageContent, onLinkNavigate } from './utils.js';
 
+// For the contact container
 document.addEventListener('DOMContentLoaded', function () {
   const expandIcon = document.querySelector('.icon-function');
   const contactContainer = document.querySelector('.container-contact');

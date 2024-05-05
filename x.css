@@ -45,6 +45,8 @@ p {
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 5px;
+
+    cursor: pointer;
 }
 
 /* Buttons */
@@ -205,13 +207,14 @@ a:focus {
 
 /* Header */
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100vw;
 
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+    z-index: 1;
 }
 
 header h1 {
@@ -374,18 +377,18 @@ nav ul {
     background-color: white;
 }
 
-#aboutPageHeader {
+.alt-pages {
     height: 71px;
 
     background-color: white;
     border-bottom: 1px solid black;
 }
 
-#aboutPageHeader h1 {
+.alt-pages h1 {
     color: black;
 }
 
-#aboutPageHeader svg {
+.alt-pages svg {
     fill: black;
 }
 
@@ -477,6 +480,9 @@ nav ul {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    float: right;
+
+    margin-right: 20px;
 }
 
 #leftColumn {
@@ -489,4 +495,40 @@ nav ul {
     display: flex;
     flex-direction: row;
     gap: 11px;
+}
+
+#contactPageMain {
+    margin-top: 91.8px;
+}
+
+#contactPageMain h1 {
+    margin: 0;
+    margin-left: 20px;
+
+    font-size: 9.6rem;
+    line-height: 1.15;
+}
+
+#contactPageMain h2 {
+    margin: 0;
+    margin-left: 20px;
+
+    font-size: 3.4rem;
+    text-wrap: nowrap;
+    line-height: 1.15;
+}
+
+#contactPageMain p {
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+
+    line-height: 1.2;
+}
+
+#contactPageMain ul {
+    margin-right: 20px;
+
+    line-height: 1.2;
 }
