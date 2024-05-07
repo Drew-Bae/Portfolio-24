@@ -51,6 +51,9 @@ p {
 
 /* Buttons */
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 64.6vw;
     height: 6vh;
 
@@ -60,10 +63,16 @@ p {
 
     font-size: 2rem;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:active, .btn:visited, .btn:focus {
+    text-decoration: none;
 }
 
 .btn-ux {
     color: var(--color-devAccent);
+    background-color: white;
 }
 
 .btn-webdev {
@@ -354,7 +363,7 @@ nav ul {
     color: var(--color-devAccent);
 }
 
-.section-container button { /* Class or is this fine? */
+.section-container a { /* Class or is this fine? */
     margin-left: 1rem;
     margin-top: 3rem;
 

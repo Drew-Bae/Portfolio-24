@@ -1,6 +1,5 @@
 import { getPageContent, onLinkNavigate } from './utils.js';
 
-// For the contact container
 document.addEventListener('DOMContentLoaded', function () {
   const expandIcon = document.querySelector('.icon-function');
   const contactContainer = document.querySelector('.container-contact');
@@ -42,7 +41,7 @@ function startViewTransition(callback) {
     return;
   }
   
-  document.startViewTransition(callback);
+  document.startViewTransition(callback.bind(document)); // Bind the callback to document
 }
 
 class IntersectionObserverHandler {
@@ -62,7 +61,9 @@ class IntersectionObserverHandler {
 
   observeElements() {
     const elements = document.querySelectorAll(`.${this.className}`);
-    elements.forEach(el => this.observer.observe(el));
+    if (elements) {
+      elements.forEach(el => this.observer.observe(el));
+    }
   }
 }
 
