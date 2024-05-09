@@ -100,7 +100,7 @@ a:focus {
 }
 
 /* Containers */
-.container, .container-mission, .container-ability, .container-contact, .container-form {
+.container, .container-mission, .container-ability, .container-contact, .container-form, .container-toolkit {
     --b: 2px; /* Border thickness */
     --s: 20px; /* Length of corner */
     --g: 10px; /* Gap between content and border */
@@ -127,7 +127,7 @@ a:focus {
 }
 
 .container span, .container-mission span, .container-ability span,
- .container-contact span, .container-form span {
+ .container-contact span, .container-form span, .container-toolkit span {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -166,6 +166,11 @@ a:focus {
 
 .show-form {
     height: 305px;
+    width: 296px;
+}
+
+.show-toolkit {
+    height: 480px;
     width: 296px;
 }
 
@@ -637,8 +642,13 @@ form button {
     margin-right: 20px;
 }
 
-.container-mission { /* Chna */
+.container-toolkit {
     --c: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .title {
@@ -653,10 +663,55 @@ form button {
 }
 
 .skills {
-    height: 109px;
+    height: 90px;
     width: 100%;
 
-    border-radius: 10px;
+    font-family: "Bebas Neue", Inter;
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .99);
 
-    background-color: var(--color-uxSecondary);
+    border-radius: 10px;
+}
+
+.gray-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.prototype-background {
+    background-image: url(videos/prototype.gif);
+    background-size: cover;
+    background-position: 0% 25%;
+}
+
+.wireframe-background {
+    background-image: url(videos/wireframe.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+.figma-background {
+    background-image: url(videos/figma.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+.user-research-background {
+    background-image: url(videos/user_research.gif);
+    background-size: cover;
+    background-position: 0% 40%;
+}
+
+.usability-testing-background {
+    background-image: url(videos/usability_testing.gif);
+    background-size: cover;
+    background-position: center;
 }

@@ -81,3 +81,6 @@ myContactObserver.observeElements();
 
 const myFormObserver = new IntersectionObserverHandler('container-form', 'show-form');
 myFormObserver.observeElements();
+
+const myToolkitObserver = new IntersectionObserverHandler('container-toolkit', 'show-toolkit');
+myToolkitObserver.observeElements();
