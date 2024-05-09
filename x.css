@@ -224,6 +224,7 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
+    height: 69px;
 
     display: flex;
     justify-content: space-between;
@@ -610,4 +611,52 @@ form button {
     width: 30px;
     margin-left: 13px;
     transform: scaleX(-1);
+}
+
+/* UX Design Page */
+.ux-background {
+    height: 100vh; /* erase later */
+
+    background-color: var(--color-uxPrimary);
+}
+
+#uxDesignHeader {
+    background-color: var(--color-uxPrimary);
+}
+
+#uxDesignMain {
+    padding-top: 69px;
+
+    color: white;
+    background-color: var(--color-uxPrimary);
+}
+
+.section-margins {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container-mission { /* Chna */
+    --c: white;
+}
+
+.title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 10px;
+
+    font-size: 2rem;
+}
+
+.skills {
+    height: 109px;
+    width: 100%;
+
+    border-radius: 10px;
+
+    background-color: var(--color-uxSecondary);
 }
