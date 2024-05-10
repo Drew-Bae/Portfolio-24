@@ -394,6 +394,8 @@ nav ul {
 
 /* About Page */
 #aboutPageBody {
+    display: flex;
+    justify-content: center;
     background-color: white;
 }
 
@@ -554,7 +556,9 @@ nav ul {
 }
 
 .container-form {
-    margin: 40px 20px 20px; 
+    margin: auto;
+    margin-top: 40px; 
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -630,6 +634,9 @@ form button {
 }
 
 #uxDesignMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 69px;
 
     color: white;
@@ -637,6 +644,7 @@ form button {
 }
 
 .section-margins {
+    margin: auto;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;

@@ -27,7 +27,7 @@ onLinkNavigate(async ({ toPath }) => {
   startViewTransition(() => {
     document.body.innerHTML = content;  
     
-    if (toPath.endsWith('about.html') || toPath.endsWith('contact.html')) {
+    if (toPath.endsWith('about.html') || toPath.endsWith('contact.html') || toPath.endsWith('uxdesign.html')) {
       setTimeout(() => {
         location.reload();
       }, 2000);
