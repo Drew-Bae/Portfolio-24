@@ -100,7 +100,7 @@ a:focus {
 }
 
 /* Containers */
-.container, .container-mission, .container-ability, .container-contact, .container-form, .container-toolkit, .container-ux {
+.container, .container-mission, .container-ability, .container-contact, .container-form, .container-toolkit, .container-ux, .container-ux-goal {
     --b: 2px; /* Border thickness */
     --s: 20px; /* Length of corner */
     --g: 10px; /* Gap between content and border */
@@ -127,7 +127,8 @@ a:focus {
 }
 
 .container span, .container-mission span, .container-ability span,
- .container-contact span, .container-form span, .container-toolkit span, .container-ux span {
+ .container-contact span, .container-form span, .container-toolkit span, .container-ux span,
+ .container-ux-goal span {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -176,6 +177,11 @@ a:focus {
 
 .show-ux {
     height: 520px;
+    width: 296px;
+}
+
+.show-ux-goal {
+    height: 80px;
     width: 296px;
 }
 
@@ -398,12 +404,6 @@ nav ul {
 }
 
 /* About Page */
-#aboutPageBody {
-    display: flex;
-    justify-content: center;
-    background-color: white;
-}
-
 .alt-pages {
     height: 71px;
 
@@ -420,7 +420,13 @@ nav ul {
 }
 
 #aboutPageMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 71.8px;
+
+    background-color: white;
 }
 
 #aboutPageMain section {
@@ -655,6 +661,14 @@ form button {
     margin-right: 20px;
 }
 
+.container-ux-goal {
+    --c: white;
+
+    text-align: center;
+    line-height: normal;
+    font-weight: normal ;
+}
+
 .container-toolkit {
     --c: white;
 
@@ -665,7 +679,7 @@ form button {
 }
 
 .title {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
 }
 

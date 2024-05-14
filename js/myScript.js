@@ -87,3 +87,6 @@ myToolkitObserver.observeElements();
 
 const myUxObserver = new IntersectionObserverHandler('container-ux', 'show-ux');
 myUxObserver.observeElements();
+
+const myUxGoalObserver = new IntersectionObserverHandler('container-ux-goal', 'show-ux-goal');
+myUxGoalObserver.observeElements();
