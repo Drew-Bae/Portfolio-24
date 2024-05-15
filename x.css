@@ -100,7 +100,7 @@ a:focus {
 }
 
 /* Containers */
-.container, .container-mission, .container-ability, .container-contact, .container-form, .container-toolkit, .container-ux, .container-ux-goal {
+.container, .container-mission, .container-ability, .container-contact, .container-form, .container-ux-toolkit, .container-ux, .container-ux-goal, .container-web-goal, .container-web-toolkit {
     --b: 2px; /* Border thickness */
     --s: 20px; /* Length of corner */
     --g: 10px; /* Gap between content and border */
@@ -127,8 +127,8 @@ a:focus {
 }
 
 .container span, .container-mission span, .container-ability span,
- .container-contact span, .container-form span, .container-toolkit span, .container-ux span,
- .container-ux-goal span {
+ .container-contact span, .container-form span, .container-ux-toolkit span, .container-ux span,
+ .container-ux-goal span, .container-web-goal span, .container-web-toolkit span {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -170,7 +170,7 @@ a:focus {
     width: 296px;
 }
 
-.show-toolkit {
+.show-ux-toolkit {
     height: 480px;
     width: 296px;
 }
@@ -182,6 +182,16 @@ a:focus {
 
 .show-ux-goal {
     height: 80px;
+    width: 296px;
+}
+
+.show-web-goal {
+    height: 95px;
+    width: 296px;
+}
+
+.show-web-toolkit {
+    height: 480px;
     width: 296px;
 }
 
@@ -669,7 +679,7 @@ form button {
     font-weight: normal ;
 }
 
-.container-toolkit {
+.container-ux-toolkit {
     --c: white;
 
     display: flex;
@@ -792,4 +802,80 @@ form button {
     opacity: 1;
 
     color: white;
+}
+
+/* Web Development */
+.webdev-background {
+    height: 100vh;
+
+    background-color: var(--color-devPrimary);
+}
+
+#webDevHeader {
+    background-color: var(--color-devPrimary);
+}
+
+#webDevHeader h1 {
+    color: var(--color-devAccent);
+}
+
+#webDevHeader svg {
+    fill: var(--color-devAccent);
+}
+
+#webDevMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 69px;
+
+    color: var(--color-devAccent);
+    background-color: var(--color-devPrimary);
+}
+
+.container-web-goal {
+    --c: var(--color-devAccent);
+
+    text-align: center;
+    line-height: normal;
+    font-weight: normal ;
+}
+
+.container-web-toolkit {
+    --c: var(--color-devAccent);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.frontend-background {
+    background-image: url(videos/frontend.gif);
+    background-size: cover;
+    background-position: 0% 35%;
+}
+
+.react-background {
+    background-image: url(videos/react.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+.api-background {
+    background-image: url(videos/api.gif);
+    background-size: contain;
+    background-position: 5% 50%;
+}
+
+.sql-background {
+    background-image: url(videos/sql.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+.seo-background {
+    background-image: url(videos/seo.gif);
+    background-size: cover;
+    background-position: center;
 }

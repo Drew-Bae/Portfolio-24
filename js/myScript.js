@@ -27,7 +27,7 @@ onLinkNavigate(async ({ toPath }) => {
   startViewTransition(() => {
     document.body.innerHTML = content;  
     
-    if (toPath.endsWith('about.html') || toPath.endsWith('contact.html') || toPath.endsWith('uxdesign.html')) {
+    if (toPath.endsWith('about.html') || toPath.endsWith('contact.html') || toPath.endsWith('uxdesign.html') || toPath.endsWith('webdev.html')) {
       setTimeout(() => {
         location.reload();
       }, 2000);
@@ -82,11 +82,17 @@ myContactObserver.observeElements();
 const myFormObserver = new IntersectionObserverHandler('container-form', 'show-form');
 myFormObserver.observeElements();
 
-const myToolkitObserver = new IntersectionObserverHandler('container-toolkit', 'show-toolkit');
-myToolkitObserver.observeElements();
+const myToolkitUXObserver = new IntersectionObserverHandler('container-ux-toolkit', 'show-ux-toolkit');
+myToolkitUXObserver.observeElements();
 
 const myUxObserver = new IntersectionObserverHandler('container-ux', 'show-ux');
 myUxObserver.observeElements();
 
 const myUxGoalObserver = new IntersectionObserverHandler('container-ux-goal', 'show-ux-goal');
 myUxGoalObserver.observeElements();
+
+const myWebDevGoalObserver = new IntersectionObserverHandler('container-web-goal', 'show-web-goal');
+myWebDevGoalObserver.observeElements();
+
+const myToolkitWEBObserver = new IntersectionObserverHandler('container-web-toolkit', 'show-web-toolkit');
+myToolkitWEBObserver.observeElements();
