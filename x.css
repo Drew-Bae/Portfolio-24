@@ -80,6 +80,10 @@ p {
     background-color: var(--color-devAccent);
 }
 
+.btn-webdev:visited {
+    color: white;
+}
+
 /* Links */
 a {
     text-decoration: none;
@@ -100,7 +104,8 @@ a:focus {
 }
 
 /* Containers */
-.container, .container-mission, .container-ability, .container-contact, .container-form, .container-ux-toolkit, .container-ux, .container-ux-goal, .container-web-goal, .container-web-toolkit {
+.container, .container-mission, .container-ability, .container-contact, .container-form, .container-ux-toolkit, .container-ux, .container-ux-goal, .container-web-goal, .container-web-toolkit,
+.container-web {
     --b: 2px; /* Border thickness */
     --s: 20px; /* Length of corner */
     --g: 10px; /* Gap between content and border */
@@ -128,7 +133,8 @@ a:focus {
 
 .container span, .container-mission span, .container-ability span,
  .container-contact span, .container-form span, .container-ux-toolkit span, .container-ux span,
- .container-ux-goal span, .container-web-goal span, .container-web-toolkit span {
+ .container-ux-goal span, .container-web-goal span, .container-web-toolkit span,
+ .container-web span {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -192,6 +198,11 @@ a:focus {
 
 .show-web-toolkit {
     height: 480px;
+    width: 296px;
+}
+
+.show-web {
+    height: 520px;
     width: 296px;
 }
 
@@ -878,4 +889,40 @@ form button {
     background-image: url(videos/seo.gif);
     background-size: cover;
     background-position: center;
+}
+
+.gray-cover-web {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.container-web {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+
+    margin-bottom: 20px;
+
+    --c: var(--color-devAccent);
+}
+
+.icon-mosh {
+    width: 215px;
+}
+
+#gamehub {
+    background-color: #121212;
+    font-weight: 700;
+    color: white;
+}
+
+#moshify {
+    background-color: #000;
 }

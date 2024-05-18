@@ -96,3 +96,6 @@ myWebDevGoalObserver.observeElements();
 
 const myToolkitWEBObserver = new IntersectionObserverHandler('container-web-toolkit', 'show-web-toolkit');
 myToolkitWEBObserver.observeElements();
+
+const myWebObserver = new IntersectionObserverHandler('container-web', 'show-web');
+myWebObserver.observeElements();
