@@ -926,3 +926,171 @@ form button {
 #moshify {
     background-color: #000;
 }
+
+/* Code Career Guide & Danny's */
+/* Typography */
+.jua-regular {
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+  
+.abeezee-regular {
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.abeezee-regular-italic {
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.dosis-uniquifier {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.chewy-regular {
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#danny {
+    font-family: "Chewy", system-ui;
+    color: #EE4266;
+}
+
+.caseStudy h1 {
+    font-family: "Dosis", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 37px;
+    margin-bottom: 0;
+}
+
+.caseStudy h2 {
+    letter-spacing: -0.05em;
+    font-weight: 100;
+    font-size: 26px;
+    color: #396084;
+}
+
+.caseStudy p {
+    font-size: 16px;
+}
+  
+.caseStudy {
+    font-family: "ABeeZee", sans-serif;
+}
+
+/* Icons */
+.material-icons {
+    color: #000;
+    margin-top: 31px;
+    margin-left: 34px;
+}
+
+.material-icons.md-40{ font-size: 40px; }
+
+/* Body */
+.centerText {
+    text-align: center;
+}
+
+.year {
+    letter-spacing: -0.05em;
+    margin-top: 47px;
+    margin-bottom: 0;
+}
+
+.rest {
+    margin-top: 10px;
+    margin-left: 39px;
+    margin-right: 39px;
+    color: #686868;
+}
+
+.last {
+    margin-bottom: 0;
+}
+
+.des {
+    margin-top: 36px;
+    margin-bottom: 0;
+}
+
+.caseStudy button {
+    margin-top: 86px;
+    margin-bottom: 31px;
+    font-size: 20px;
+    height: 64px;
+    width: 292px;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.caseStudy button:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.desktop {
+    display: none;
+}
+
+.caseStudy video {
+    display: none;
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .desktop {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 58px;
+        margin-left: 272px;
+        margin-right: 272px;
+    }
+
+    .caseStudy h1 {
+        font-size: 64px;
+        margin-top: 58px;
+    }
+
+    .caseStudy p {
+        font-size: 20px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .summary {
+        text-align: left;
+    }
+
+    .paragraph {
+        text-align: left;
+        width: 467px;
+    }
+
+    .caseStudy button {
+        margin-top: 39px;
+    }
+
+    .video {
+        display: inherit;
+        height: 448px;
+        margin: auto;
+        margin-top: 58px;
+        margin-bottom: 20px;
+    }
+}
