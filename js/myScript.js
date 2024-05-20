@@ -21,6 +21,7 @@ function toggleSvgIcon(icon) {
   }
 }
 
+/*
 onLinkNavigate(async ({ toPath }) => {
   const content = await getPageContent(toPath);
   
@@ -43,6 +44,7 @@ function startViewTransition(callback) {
   
   document.startViewTransition(callback.bind(document)); // Bind the callback to document
 }
+*/
 
 class IntersectionObserverHandler {
   constructor(className, showClass) {
