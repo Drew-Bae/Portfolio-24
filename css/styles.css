@@ -8,14 +8,8 @@
     --color-portfolio: #000;
 }
 
-::view-transition-group(root) {
-    animation-duration: 5s;
-}
-
-/* Typography */
-
+/* -------------------- Typography -------------------- */
 html {
-    /* This is equvalent to 10px or 1rem */
     font-size: 62.5%;
 }
 
@@ -24,608 +18,180 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     color: black;
-    background-color: var(--color-devPrimary);
 
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
 }
 
-.ux {
-    color: var(--color-uxAccent);
-}
-
-.web {
-    color: var(--color-devAccent);
-}
-
 h1 {
-    font-size: 3.2rem;
-    margin-bottom: 4rem;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-top: 0;
-    /* Sometimes the fontstyle has built in margins so we should reduce the bottom margin to match the design as we see fit. */
-    margin-bottom: 1rem;
+    margin: 0;
 }
 
 p {
-    margin-top: 0;
+    margin: 0;
 }
 
-@media screen and (min-width: 1024px) {
-    h1 {
-        font-size: 4.778rem;
-        margin-bottom: 1.7rem;
-    }
-
-    h2 {
-        font-size: 3.318rem;
-        margin-bottom: 0rem;
-    }
-}
-
-/* Links */
+/* -------------------- Links -------------------- */
 a {
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
-.link-mobile {
-    color: black;
-    font-size: 3.2rem;
-    margin-left: 2rem;
-}
-
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-}
-  
-.hover-underline-animation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2.5px;
-    bottom: 4px;
-    left: 0;
-    background-color: black;
-    transform-origin: bottom left;
-    transition: transform 0.25s ease-out;
-}
-  
-.hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.link-active {
-    display: inline-block;
-    position: relative;
-}
-
-.link-active::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(1);
-    height: 2.5px;
-    bottom: 4px;
-    left: 0;
-    background-color: black;
-}
-
-@media screen and (min-width: 1024px) {
-    a {
-        color: var(--color-devAccent);
-        font-size: 3.244rem;
-    }
-
-    .link-mobile {
-        display: none;
-    }
-
-    .link-active::after {
-        height: 2px;
-        bottom: 5px;
-    }
-}
-
-/* Icons */
+/* -------------------- Icons -------------------- */
 .icon {
-    width: 40px;
     height: 40px;
-}
-
-.icon--functions {
     width: 40px;
-    height: 40px;
     cursor: pointer;
 }
 
-.icon--social {
-    width: 30px;
-    height: 30px;
-}
-
-.icon-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
+svg {
+    justify-self: center;
     align-items: center;
-    margin-left: 24px;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    margin-right: 19px;
+    grid-area: icon;
 }
 
-.icon--box {
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-/* .icon-circle is getting warped because it is not getting enough space inside. So I will try to force the text to go to the next line at a certain point. */
-.icon-container {
-    display: flex;
-    align-items: center;
-    width: 278px;
-    height: 86px;
-    background: #CFE6F2;
-    border-radius: 10px;
-    font-weight: 300;
-    line-height: 19px;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, .25);
-}
-
-.icon-tool {
-    font-family: gluten, Arial, Helvetica, sans-serif;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-tool {
-    margin: 0;
-}
-
-.icon-tool p {
-    margin-top: 4px;
-}
-
-#close:hover {
-    fill: #FF0000;
-}
-
-.hand {
-    height: 30px;
-    width: 30px;
-    transform: scaleX(-1);
-}
-
-@media screen and (min-width: 1024px) {
-    .icon--functions {
-        width: 50px;
-        height: 50px;
-    } 
-
-    .icon--social {
-        width: 64px;
-        height: 64px;
-    }
-
-    .hand {
-        height: 36px;
-        width: 36px;
-    }
-}
-
-/* Container */
-.container, .container_email {
-    --b: 2px; /* Border thickness */
-    --s: 20px; /* Length of corner */
-    --g: 20px; /* Gap between content and border */
-    --c: black;
-
-    padding: calc(var(--b) + var(--g));
-    background-image: 
-        conic-gradient(from 90deg at top var(--b) left var(--b), #0000 25%, var(--c) 0),
-        conic-gradient(from -90deg at bottom var(--b) right var(--b), #0000 25%, var(--c) 0);
-    background-position: 
-        var(--_p, 0%) var(--_p, 0%),
-        calc(100% - var(--_p, 0%)) calc(100% - var(--_p, 0%));
-    background-size: var(--s) var(--s);
-    background-repeat: no-repeat;
-
-    width: 0px;
-    height: 0px;
-    overflow: hidden;
-    transition: all 1s;
-    /*animation: role 1s forwards .3s;*/
-}
-
-.container span,.container_email span {
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity 1.5s;
-    font-weight: 700;
-}
-
-.show {
-    width: 150px;
-    height: 53px;
-}
-
-.show span {
-    opacity: 1;
-}
-
-.outer-heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-
-.inner-heading {
-    border: 0px solid #ddd;
-    height: 2.6rem;
-    overflow: hidden;
-}
-
-.rotate {
-    position: relative;
-    animation: spin 8s ease infinite;
-}
-
-@keyframes spin {
-    0%,
-    100% {
-        top: 0;
-    }    
-    20% {
-        top: 0;
-    }
-    25% {
-        top: -2.7rem;
-    }
-    45% {
-        top: -2.7rem;
-    }
-    50% {
-        top: -5.4rem;
-    }
-    70% {
-        top: -5.4rem;
-    }
-    75% {
-        top: -8.1rem;
-    }
-    95% {
-        top: -8.1rem;
-    }
-}
-
-.placeholder {
-    background-color: #3A405A;
-    height: 50vh;
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
-/* Buttons */
+/* -------------------- Buttons -------------------- */
 .btn {
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-
-    width: 64.6vw;
-    height: 6vh;
+    grid-area: button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.8rem;
+    width: 23.3rem;
+    margin-left: 1rem;
+    margin-top: 3rem;
 
     border: none;
     border-radius: 10px;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.3);
 
-    box-shadow: 8px 8px 4px rgba(0, 0, 0, .3);
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.btn-ux {
-    color: var(--color-devAccent);
+.btn:hover, .btn:active, .btn:visited, .btn:focus {
+    text-decoration: none;
 }
 
-.btn-web {
-    color: #fff;
+#buttonUX {
+    color: var(--color-devAccentt);
+    background-color: white;
+}
+
+#buttonWeb {
+    color: white;
     background-color: var(--color-devAccent);
-    box-shadow: rgba(0, 0, 0, .25);
 }
 
-.btn-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 63px;
-    width: 280px;
-    border: 3px solid black;
-    border-radius: 10px;
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 2.4rem;
-    font-weight: 700;
-
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, .25);
-}
-
-@media screen and (min-width: 1024px) {
-    .btn {
-        width: 299px;
-        height: 80px;
-
-        font-size: 2.883rem;
-
-        box-shadow: 12px 12px 4px rgba(0, 0, 0, .3);
-    }
-
-    .btn-form {
-        height: 80px;
-        width: 299px;
-        font-size: 2.883rem;
-    }
-}
-
-/* Profile Picture */
-.mobile-profile {
-    height: 160px;
-    width: 160px;
-    object-fit: fill;
-    border-radius: 10px;
-}
-
-.desktop-profile {
-    display: none;
-}
-
-.desktop-title {
-    display: none;
-}
-
-@media screen and (min-width: 1024px) {
-    .mobile-profile {
-        display: none;
-    }
-
-    .desktop-profile {
-        display: unset;
-        width: 350px;
-        height: 350px;
-    }
-
-    .desktop-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .desktop-title h1 {
-        font-size: 4.778rem;
-        font-weight: 700;
-        margin-top: 16px;
-        margin-bottom: 0;
-    }
-
-    .desktop-title h2 {
-        font-size: 3.318rem;
-        font-weight: 600;
-        color: #626262;
-    }
-}
-
-/* Form */
-.show_email {
-    width: 280px;
-    height: 299px;
-}
-
-.show_email span {
-    opacity: 1;
-}
-
-label {
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 1.9rem;
-    font-weight: 700;
-    color: #939393;
-}
-
-/* Nav */
-nav {
-    position: absolute;
-    top: 0;
-    width: 100vw;
+/* -------------------- Header -------------------- */
+header {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    height: 69px;
+    width: 100vw;
+
     text-transform: uppercase;
 }
 
-nav h1 {
-    display: inline;
+#logo {
     margin: 0;
     margin-left: 2rem;
+    margin-top: 1.8rem;
+
     font-size: 2.4rem;
-    color: var(--color-uxAccent);
+    color: white;
 }
 
-nav span {
-    margin-top: 2rem;
-}
-
-nav svg {
-    margin: 0;
+#navIcon {
     margin-top: 1.6rem;
     margin-right: 1.6rem;
-    fill: var(--color-uxAccent);
-    z-index: 2;
+
+    fill: white;
 }
 
-.open-nav {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #fff;
-    z-index: 1;
-}
-
-.custom-list {
-    height: 100vh;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
+/* -------------------- MAIN -------------------- */
+main h1 {
+    grid-area: title;
+    padding-right: 1rem;
     justify-content: center;
-    gap: 4.7rem;
-    padding-inline-start: 2rem;
+    align-self: center;
 
-    list-style-type: none;
     font-size: 3.2rem;
-    line-height: normal;
+    font-weight: 700;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-wrap: nowrap;
 }
 
-.custom-list a:link {
-    color: #000;
+main p {
+    grid-area: description;
+    width: 25.6rem;
+    margin-left: 1rem;
+    align-self: center;
 }
 
-.custom-list a:visited {
-    color: #000;
-}
-
-/* Hero */
-.ux-background {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 50vh;
-    background-color: var(--color-uxPrimary);
-}
-
-.web-background {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 50vh;
-    background-color: var(--color-devPrimary);
-}
-
-.ux-hero {
+.section-container {
     display: grid;
+    height: 50vh;
+    width: 100vw;
+}
+
+/* -------------- UX Section -------------- */
+.section-ux {
+    height: calc(50vh - 12.8vh);
+    padding-top: 12.8vh;
+
     grid-template-columns: [first] auto [line2] auto [end];
     grid-template-rows: [row1-start] auto [row1-end] 1fr [third-line] 40px [last-line];
     grid-template-areas: 
-        "header content1"
-        "header content2"
-        "footer footer";
-    padding-top: 12.8vh;
+        "title description"
+        "title button"
+        "icon icon";
+
+    background-color: var(--color-uxPrimary);
 }
 
-.webdev-hero {
-    height: 50vh;
-    display: grid;
+.section-ux h1 {
+    margin-bottom: 6rem;
+    color: var(--color-uxAccent);
+}
+
+.section-ux p {
+    color: var(--color-uxAccent);
+}
+
+#chevronUp {
+    transform: rotate(180deg);
+
+    fill: var(--color-devPrimary);
+}
+
+/* -------------- Web Dev Section -------------- */
+.section-webdev {
     grid-template-columns: [first] auto [line2] auto [end];
     grid-template-rows: [row1-start] 40px [row1-end] auto [third-line] 1fr [last-line];
     grid-template-areas: 
-        "footer footer"
-        "header content1"
-        "header content2";
+        "icon icon"
+        "title description"
+        "title button";
+
     background-color: var(--color-devPrimary);
 }
 
-.title-hero-ux {
-    grid-area: header;
-    justify-self: center;
-    align-self: center;
-    margin: 0;
-    margin-bottom: 6rem;
-    padding-right: 1rem;
-    writing-mode: vertical-lr;
-    text-wrap: nowrap;
-    transform: rotate(180deg);
-
-    font-size: 4vh;
-    color: var(--color-uxAccent);
-}
-
-.title-hero-web {
-    grid-area: header;
-    justify-self: center;
-    align-self: center;
-    margin: 0;
-    padding-right: 1rem;
-    writing-mode: vertical-lr;
-    text-wrap: nowrap;
-    transform: rotate(180deg);
-
-    font-size: 4vh;
+.section-webdev h1 {
+    margin-bottom: 4rem;
     color: var(--color-devAccent);
 }
 
-.ux-hero p {
-    grid-area: content1;
-    align-self: center;
-    margin: 0;
-    margin-left: 1rem;
-    width: 25.6rem;
-    color: var(--color-uxAccent);
-    
-    font-size: 2vh;
-}
-
-.webdev-hero p {
-    grid-area: content1;
-    align-self: center;
-    margin: 0;
-    margin-left: 1rem;
-    margin-top: 7.35vh;
-    width: 25.6rem;
+.section-webdev p {
+    margin-top: 6.35vh;
     color: var(--color-devAccent);
-
-    font-size: 2vh;
 }
 
-.ux-hero button {
-    grid-area: content2;
-    margin-left: 1rem;
-    margin-top: 3rem;
-    margin-bottom: 7.65vh;
-}
-
-.webdev-hero button {
-    grid-area: content2;
-    margin-left: 1rem;
-    margin-top: 3rem;
-}
-
-.ux-hero svg {
-    grid-area: footer;
-    justify-self: center;
-    align-self: end;
-    fill: var(--color-devPrimary);
-    transform: rotate(180deg);
-}
-
-.webdev-hero svg {
-    grid-area: footer;
-    justify-self: center;
-    align-self: start;
+#chevronDown {
     fill: var(--color-devSecondary);
 }
