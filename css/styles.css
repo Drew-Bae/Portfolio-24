@@ -230,6 +230,10 @@ main p {
         justify-content: flex-start;
     }
 
+    .logo-container:hover {
+        text-decoration: none;
+    }
+
     .logo-container img {
         display: unset;
         margin-left: 2.3rem;
