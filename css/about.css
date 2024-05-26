@@ -122,10 +122,6 @@ header a:hover {
     fill: black;
 }
 
-.desktop-links {
-    display: none;
-}
-
 /* --------------- Main --------------- */
 main {
     display: flex;
@@ -160,6 +156,10 @@ main h1 {
 
     object-fit: fill;
     border-radius: 10px;
+}
+
+.desktop-profile-picture {
+    display: none;
 }
 
 #role {
@@ -254,4 +254,101 @@ main h1 {
 
     background-color: white;
     border-radius: 50%;
+}
+
+@media (min-width: 1024px) {
+    /* ---------- Icons ---------- */
+    .icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    #navIcon {
+        display: none;
+    }
+
+    .desktop-links {
+        display: unset;
+    }
+
+    /* ---------- Container ---------- */
+    .container, .container-mission, .container-ability {
+        --g: 23px;
+    }
+
+    .container-mission p {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .show {
+        
+    }
+
+    .show-mission {
+        height: 165px;
+        width: 631px;
+
+        display: flex;
+    }
+
+    .show-ability {
+        height: 130px;
+        width: 631px;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+        display: none;
+    }
+
+    /* ---------- Main ---------- */
+    main {
+        display: unset;
+    }
+
+    main h1 {
+        margin-bottom: .5rem;
+
+        font-size: 3.318rem;
+    }
+
+    .flex-column-container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .flex-container {
+        height: 100vh;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        left: 0;
+    }
+
+    .mobile-profile-picture {
+        display: none;
+    }
+
+    .desktop-profile-picture {
+        display: unset;
+        height: 350px;
+        width: 350px;
+    }
+
+    #myName {
+        margin: 0;
+
+        font-size: 4.778rem;
+    }
 }
