@@ -162,6 +162,10 @@ main h1 {
     display: none;
 }
 
+#myName {
+    display: none;
+}
+
 #role {
     margin-top: 2rem;
     margin-right: 1rem;
@@ -272,7 +276,13 @@ main h1 {
     }
 
     /* ---------- Container ---------- */
-    .container, .container-mission, .container-ability {
+    .container {
+        --b: 0;
+        --s: 0;
+        --g: 0;
+    }
+
+    .container-mission, .container-ability {
         --g: 23px;
     }
 
@@ -282,19 +292,21 @@ main h1 {
     }
 
     .show {
-        
+        height: 60px;
+        width: 270px;
+
     }
 
     .show-mission {
         height: 165px;
-        width: 631px;
+        width: 50vw;
 
         display: flex;
     }
 
     .show-ability {
         height: 130px;
-        width: 631px;
+        width: 50vw;
     }
 
     /* ---------- Header ---------- */
@@ -347,8 +359,108 @@ main h1 {
     }
 
     #myName {
+        display: unset;
         margin: 0;
 
         font-size: 4.778rem;
+    }
+
+    #role {
+        margin: 0;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .outer-heading {
+        text-align: center;
+
+        font-size: 3.318rem;
+        font-weight: 600;
+    }
+
+    .inner-heading {
+        height: 4.5rem;
+    }
+
+    @keyframes spin {
+        0%,
+        100% {
+            top: 0;
+        }    
+        20% {
+            top: 0;
+        }
+        25% {
+            top: -5rem;
+        }
+        45% {
+            top: -5rem;
+        }
+        50% {
+            top: -10rem;
+        }
+        70% {
+            top: -10rem;
+        }
+        75% {
+            top: -15rem;
+        }
+        95% {
+            top: -15rem;
+        }
+    }
+
+    .container-ability {
+        display: flex;
+        flex-direction: row;
+        gap: 51px;
+
+        margin: 0;
+    }
+
+    .container-ability div {
+        height: 134px;
+        width: 270px;
+
+        margin: 0;
+
+        background-color: #d2cff2;
+        box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .container-ability div h2 {
+        line-height: normal;
+    }
+
+    .circle-container {
+        height: 62px;
+        width: 62px;
+
+        margin-left: 18px;
+    }
+
+    .circle-container .icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    svg {
+        fill: #78909C;
+    }
+}
+
+@media (min-width: 1026px) {
+    .show-mission {
+        height: 165px;
+        width: 631px;
+
+        display: flex;
+    }
+
+    .show-ability {
+        height: 130px;
+        width: 631px;
     }
 }
