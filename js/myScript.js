@@ -1,4 +1,22 @@
-import { getPageContent, onLinkNavigate } from './utils.js';
+document.addEventListener('DOMContentLoaded', () => {
+  // Fade in animation when the page loads
+  document.body.classList.add('fade-in');
+
+  const links = document.querySelectorAll('.transition-link');
+
+  links.forEach(link => {
+      link.addEventListener('click', event => {
+          event.preventDefault();
+          const targetUrl = link.getAttribute('href');
+
+          document.body.classList.add('fade-out');
+
+          setTimeout(() => {
+              window.location.href = targetUrl;
+          }, 500); // Match the duration of the CSS transition
+      });
+  });
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   const expandIcon = document.querySelector('.icon-function');
@@ -20,31 +38,6 @@ function toggleSvgIcon(icon) {
     useElement.setAttribute('xlink:href', '../images/sprite.svg#expand-content');
   }
 }
-
-/*
-onLinkNavigate(async ({ toPath }) => {
-  const content = await getPageContent(toPath);
-  
-  startViewTransition(() => {
-    document.body.innerHTML = content;  
-    
-    if (toPath.endsWith('about.html') || toPath.endsWith('contact.html') || toPath.endsWith('uxdesign.html') || toPath.endsWith('webdev.html')) {
-      setTimeout(() => {
-        location.reload();
-      }, 2000);
-    }
-  });
-});
-
-function startViewTransition(callback) {
-  if (!document.startViewTransition) {
-    callback();
-    return;
-  }
-  
-  document.startViewTransition(callback.bind(document)); // Bind the callback to document
-}
-*/
 
 class IntersectionObserverHandler {
   constructor(className, showClass) {
