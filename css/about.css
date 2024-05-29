@@ -350,8 +350,6 @@ main h1 {
     /* ---------- Header ---------- */
     header {
         align-items: center;
-
-        border: none;
     }
 
     #logo {
@@ -362,6 +360,10 @@ main h1 {
     /* ---------- Main ---------- */
     main {
         display: unset;
+    }
+
+    main section {
+        margin-right: 12rem;
     }
 
     main h1 {
