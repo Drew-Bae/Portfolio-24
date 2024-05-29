@@ -64,56 +64,103 @@
         </div>
       </div>
 
-      <h1>hey</h1>
-      <h2>let's work together</h2>
-      <p>
-        Got a brilliant project idea? Let me be the bridge from concept to
-        reality. Whether you need a stunning design or already have one, I
-        specialize in seamlessly transitioning from design to development.
-      </p>
-      <ul>
-        <li>
-          <b>Starting from Scratch?</b> Have an idea but no design? Let me craft
-          a unique and user-centric design tailored to your vision.
-        </li>
-        <li>
-          <b>Already Have a Design?</b> If you've got a design from another
-          designer, I can step in as the developer and bring it to life. Your
-          vision, my expertise.
-        </li>
-      </ul>
-      <p>
-        Feel free to say "hi" or discuss your project. Drop me a message, and
-        let’s turn your ideas into a digital masterpiece. Don't hesitate to
-        reach out for more exciting updates. <br />
-        <br />
-        Let's build something extraordinary together!
-      </p>
+      <div class="desktop-contact-icons">
+        <svg class="icon-contact">
+          <use xlink:href="../images/sprite.svg#linkedin"></use>
+        </svg>
+        <svg class="icon-contact">
+          <use xlink:href="../images/sprite.svg#instagram"></use>
+        </svg>
+        <svg class="icon-contact">
+          <use xlink:href="../images/sprite.svg#x-twitter"></use>
+        </svg>
+        <svg id="githubIcon" class="icon-contact">
+          <use xlink:href="../images/sprite.svg#github"></use>
+        </svg>
+        <svg class="icon-contact">
+          <use xlink:href="../images/sprite.svg#behance"></use>
+        </svg>
+        <svg id="dribbbleIcon" class="icon-contact">
+          <use xlink:href="../images/sprite.svg#dribbble"></use>
+        </svg>
+      </div>
 
-      <div class="container-form">
-        <form>
-          <label for="reason"
-            >What can I do for you? <span id="optional">(optional)</span></label
-          >
-          <select name="reason" id="reason">
-            <option value="design">Design</option>
-            <option value="webdev">Web Development</option>
-            <option value="both">Both</option>
-            <option value="question">Question?</option>
-          </select>
-          <input type="text" placeholder="name" />
-          <input type="text" placeholder="email" />
-          <input type="text" placeholder="message" />
-          <button type="button">
-            <span>hello!</span>
-            <span
-              ><img
-                src="../images/icons8-waving-hand-emoji-48.png"
-                alt="waving hand"
-                class="hand"
-            /></span>
-          </button>
-        </form>
+      <div id="leftSide">
+        <h1>hey</h1>
+        <h2>let's work together</h2>
+        <p>
+          Got a brilliant project idea? Let me be the bridge from concept to
+          reality. Whether you need a stunning design or already have one, I
+          specialize in seamlessly transitioning from design to development.
+        </p>
+        <ul>
+          <li>
+            <b>Starting from Scratch?</b> Have an idea but no design? Let me
+            craft a unique and user-centric design tailored to your vision.
+          </li>
+          <li>
+            <b>Already Have a Design?</b> If you've got a design from another
+            designer, I can step in as the developer and bring it to life. Your
+            vision, my expertise.
+          </li>
+        </ul>
+        <p>
+          Feel free to say "hi" or discuss your project. Drop me a message, and
+          let’s turn your ideas into a digital masterpiece. Don't hesitate to
+          reach out for more exciting updates. <br />
+          <br />
+          Let's build something extraordinary together!
+        </p>
+      </div>
+
+      <div id="rightSide">
+        <div class="container-form">
+          <form>
+            <label for="reason"
+              >What can I do for you?
+              <span id="optional">(optional)</span></label
+            >
+            <select name="reason" id="reason">
+              <option value="design">Design</option>
+              <option value="webdev">Web Development</option>
+              <option value="both">Both</option>
+              <option value="question">Question?</option>
+            </select>
+            <span id="reasonDesktop">
+              <label
+                ><input type="checkbox" name="reason" value="design" /><span
+                  >Design</span
+                ></label
+              >
+              <label
+                ><input type="checkbox" name="reason" value="webdev" /><span
+                  >Development</span
+                ></label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="reason"
+                  value="fullpackage"
+                /><span>Full Package</span></label
+              >
+            </span>
+            <span class="desktop-group">
+              <input type="text" placeholder="name" />
+              <input type="text" placeholder="email" />
+            </span>
+            <input type="text" placeholder="message" />
+            <button type="button">
+              <span>hello!</span>
+              <span
+                ><img
+                  src="../images/icons8-waving-hand-emoji-48.png"
+                  alt="waving hand"
+                  class="hand"
+              /></span>
+            </button>
+          </form>
+        </div>
       </div>
     </main>
   </body>
