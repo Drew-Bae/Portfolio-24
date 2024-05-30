@@ -95,7 +95,7 @@ myFormObserver.observeElements();
 const myToolkitUXObserver = new IntersectionObserverHandler('container-ux-toolkit', 'show-ux-toolkit');
 myToolkitUXObserver.observeElements();
 
-const myUxObserver = new IntersectionObserverHandler('container-ux', 'show-ux');
+const myUxObserver = new IntersectionObserverHandler('container-ux-work', 'show-ux-work');
 myUxObserver.observeElements();
 
 const myUxGoalObserver = new IntersectionObserverHandler('container-ux-goal', 'show-ux-goal');
