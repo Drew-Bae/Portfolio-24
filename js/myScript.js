@@ -18,6 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const reasonOptions = document.querySelectorAll("#reasonDesktop label span");
+
+  reasonOptions.forEach(option => {
+      option.addEventListener("click", () => {
+          if (option.classList.contains("selected")) {
+              option.classList.remove("selected");
+          } else {
+              reasonOptions.forEach(o => o.classList.remove("selected"));
+              option.classList.add("selected");
+          }
+      });
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   const expandIcon = document.querySelector('.icon-function');
   const contactContainer = document.querySelector('.container-contact');

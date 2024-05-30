@@ -374,9 +374,9 @@ input {
 
     @keyframes shake {
         0% { transform: scaleX(-1) rotate(0deg); }
-        25% { transform: scaleX(-1) rotate(10deg); }
+        25% { transform: scaleX(-1) rotate(15deg); }
         50% { transform: scaleX(-1) rotate(0deg); }
-        75% { transform: scaleX(-1) rotate(-10deg); }
+        75% { transform: scaleX(-1) rotate(-15deg); }
         100% {
             transform: scaleX(-1) rotate(0deg);
         }
@@ -513,6 +513,12 @@ input {
         border-color: #FF0000;
         color: #FF0000;
     }
+
+    #reasonDesktop span.selected {
+        border-color: #FF0000;
+        color: #FF0000;
+    }
+
 
     .desktop-group {
         flex-direction: row;        
