@@ -318,6 +318,8 @@ main {
 
     .desktop-links a {
         text-underline-offset: 8px;
+
+        color: white;
     }
 
     .desktop-links a:visited {

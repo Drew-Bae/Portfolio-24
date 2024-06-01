@@ -331,15 +331,17 @@ input {
         margin-right: 2.3rem;
         font-size: 2.5rem;
         font-weight: 700;
-        color: var(--color-devAccent);
+        color: black;
     }
 
     .desktop-links a {
         text-underline-offset: 8px;
+
+        color: black;
     }
 
     .desktop-links a:visited {
-        color: var(--color-devAccent);
+        color: black;
     }
 
     .desktop-links a:focus, .desktop-links a:hover {
