@@ -292,6 +292,15 @@ main {
     color: white;
 }
 
+.to-ux {
+    width: 80px;
+    transition: width 1s; /* Adjust timing as needed */
+}
+
+.to-ux.expand-width {
+    width: calc(100vw - 80px) !important;
+}
+
 @media (min-width: 1025px) {
     /* ---------- Icons ---------- */
     #navIcon {

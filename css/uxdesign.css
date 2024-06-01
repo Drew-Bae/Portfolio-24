@@ -290,6 +290,15 @@ main {
     color: white;
 }
 
+.to-web {
+    width: 80px;
+    transition: width 1s; /* Adjust timing as needed */
+}
+
+.to-web.expand-width {
+    width: calc(100vw - 80px) !important;
+}
+
 @media (min-width: 1025px) {
     /* ---------- Icons ---------- */
     #navIcon {

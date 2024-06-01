@@ -1,5 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Fade in animation when the page loads
+  const expandLink = document.querySelector('.expand-link');
+  const toUx = document.querySelector('.to-ux');
+
+  expandLink.addEventListener('click', event => {
+      event.preventDefault();
+      toUx.classList.add('expand-width');
+
+      // Wait for the width transition to complete before switching to the next page
+      setTimeout(() => {
+          window.location.href = expandLink.getAttribute('href');
+      }, 1000); // Adjust the timeout to match the transition duration
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const expandLink = document.querySelector('.expand-link');
+  const toWeb = document.querySelector('.to-web');
+
+  expandLink.addEventListener('click', event => {
+      event.preventDefault();
+      toWeb.classList.add('expand-width');
+
+      // Wait for the width transition to complete before switching to the next page
+      setTimeout(() => {
+          window.location.href = expandLink.getAttribute('href');
+      }, 1000); // Adjust the timeout to match the transition duration
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Fade in animation when the page loads 
   document.body.classList.add('fade-in');
 
   const links = document.querySelectorAll('.transition-link');
