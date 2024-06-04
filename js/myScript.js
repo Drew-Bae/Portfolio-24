@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Handle Email if contact-form exists
   const form = document.getElementById('contact-form');
+  const notification = document.querySelector('.notification-background');
+
   if (form) {
     form.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -23,9 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
       emailjs.send('service_qn9ctvl', 'template_ec3xpmo', templateParams, 'OpBuzvRetYEbSSanI')
         .then(function(response) {
           console.log('SUCCESS!', response.status, response.text);
+          // Show notification
+          notification.style.display = 'flex';
         }, function(error) {
           console.error('FAILED...', error);
         });
+    });
+  }
+
+  // Close notification when clicking the close icon or the notification background
+  if (notification) {
+    notification.addEventListener('click', (event) => {
+      if (event.target === notification || event.target.closest('.icon')) {
+        notification.style.display = 'none';
+      }
     });
   }
 
