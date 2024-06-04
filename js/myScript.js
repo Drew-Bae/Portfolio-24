@@ -1,3 +1,29 @@
+// Handle Email
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const reason = document.getElementById('reason').value || Array.from(document.querySelectorAll('#reasonDesktop input[type="checkbox"]:checked')).map(el => el.nextElementSibling.textContent).join(', ');
+  const name = document.querySelector('input[name="name"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const message = document.querySelector('input[name="message"]').value;
+
+  const templateParams = {
+    reason: reason,
+    name: name,
+    email: email,
+    message: message,
+    subject: `${reason} - ${name}`
+  };
+
+  emailjs.send('service_qn9ctvl', 'template_25g3wf2', templateParams, 'OpBuzvRetYEbSSanI')
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+      console.log('FAILED...', error);
+    });
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const expandLink = document.querySelector('.expand-link');
   const toUx = document.querySelector('.to-ux');
