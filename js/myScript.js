@@ -18,11 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         subject: `${reason} - ${name}`
       };
 
-      emailjs.send('service_qn9ctvl', 'template_25g3wf2', templateParams, 'OpBuzvRetYEbSSanI')
+      console.log('Sending email with the following parameters:', templateParams);
+
+      emailjs.send('service_qn9ctvl', 'template_ec3xpmo', templateParams, 'OpBuzvRetYEbSSanI')
         .then(function(response) {
           console.log('SUCCESS!', response.status, response.text);
         }, function(error) {
-          console.log('FAILED...', error);
+          console.error('FAILED...', error);
         });
     });
   }
