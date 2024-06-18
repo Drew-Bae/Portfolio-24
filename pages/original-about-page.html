@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drew Bae</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Dosis:wght@700&family=Gluten:wght@300&family=Inter:wght@100..900&family=K2D:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="icon" href="../icons/favicon.ico" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html" class="transition-link">
+        <h1 id="logo">Drew Bae</h1>
+      </a>
+      <a href="./nav.html" class="transition-link">
+        <svg class="icon" id="navIcon">
+          <use xlink:href="../images/sprite.svg#hamburger-menu"></use>
+        </svg>
+      </a>
+      <div class="desktop-links">
+        <a
+          href="../pages/about.html"
+          class="transition-link"
+          style="text-decoration: underline"
+          >About</a
+        >
+        <a href="../pages/contact.html" class="transition-link">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="flex-container">
+        <img
+          class="mobile-profile-picture"
+          src="../images/profilePic.png"
+          alt="picture of Drew Bae"
+        />
+        <img
+          class="desktop-profile-picture"
+          src="../images/Ellipse 1.png"
+          alt="picture of Drew Bae"
+        />
+        <h1 id="myName">Drew Bae</h1>
+        <div id="role" class="container">
+          <div class="outer-heading">
+            <span class="hide-desktop">I am a -</span>
+            <div class="inner-heading">
+              <span class="rotate">
+                <span style="color: #3a405a">UX Designer </span><br />
+                <span style="color: #508fef">User Researcher</span> <br />
+                <span style="color: #94bfa7">Web Developer</span> <br />
+                <span style="color: #ef5050">Freelancer</span> <br />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-column-container">
+        <section>
+          <h1>my mission.</h1>
+          <div class="container-mission">
+            <p>
+              My mission is to elevate your online presence by offering a
+              distinctive and enjoyable user experience. Through meticulous user
+              research, rigorous testing, and continuous iteration, I ensure
+              that your website not only meets but exceeds user expectations.
+              Fueled by a deep understanding of state-of-the-art web
+              technologies, I am dedicated to making your website stand out
+              prominently in the digital landscape.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h1>my ability.</h1>
+          <div class="container-ability">
+            <div>
+              <span class="circle-container">
+                <svg class="icon">
+                  <use xlink:href="../images/sprite.svg#graduation-cap"></use>
+                </svg>
+              </span>
+              <h2>Bachelor's of Science in Computer Science</h2>
+            </div>
+            <div style="background-color: #d2cff2">
+              <span class="circle-container">
+                <svg class="icon">
+                  <use xlink:href="../images/sprite.svg#google"></use>
+                </svg>
+              </span>
+              <h2>Google's UX Design Professional Certificate</h2>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script defer type="module" src="../js/myScript.js"></script>
+  </body>
+</html>
