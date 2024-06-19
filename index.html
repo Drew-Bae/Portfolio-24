@@ -12,16 +12,25 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <!-- Inline the SVG symbol definition in your HTML file -->
+    <svg style="display: none">
+      <symbol id="hamburger-menu" viewBox="0 -960 960 960">
+        <path
+          d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+        ></path>
+      </symbol>
+    </svg>
+
     <header>
       <a href="index.html" class="transition-link">
         <h1 id="logo">Drew Bae</h1>
       </a>
       <a href="pages/nav.html" class="transition-link" id="navIcon">
         <svg class="icon">
-          <use xlink:href="../images/sprite.svg#hamburger-menu"></use>
+          <use href="#hamburger-menu"></use>
         </svg>
       </a>
       <div class="desktop-links">
@@ -38,7 +47,9 @@
           in crafting intuitive designs that prioritize user delight and
           functionality.
         </p>
-        <a href="pages/uxdesign.html" class="btn transition-link" id="buttonUX">Learn more</a>
+        <a href="pages/uxdesign.html" class="btn transition-link" id="buttonUX"
+          >Learn more</a
+        >
       </section>
 
       <section class="section-container section-webdev">
@@ -48,8 +59,11 @@
           coding and creating dynamic web solutions. Embark on a journey through
           the exciting world of web development.
         </p>
-        <a href="pages/webdev.html" class="btn transition-link" id="buttonWeb">Learn more</a>
+        <a href="pages/webdev.html" class="btn transition-link" id="buttonWeb"
+          >Learn more</a
+        >
       </section>
     </main>
     <script type="module" src="../js/myScript.js"></script>
+  </body>
 </html>

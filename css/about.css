@@ -208,6 +208,10 @@ main h1 {
     animation: spin 8s ease infinite;
 }
 
+svg {
+    fill: #78909C;
+}
+
 @keyframes spin {
     0%,
     100% {
@@ -280,6 +284,8 @@ main h1 {
     .icon {
         height: 50px;
         width: 50px;
+
+        cursor: unset;
     }
 
     #navIcon {

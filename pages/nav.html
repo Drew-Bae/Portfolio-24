@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Drew Bae</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,10 +16,17 @@
     <script defer type="module" src="../js/myScript.js"></script>
   </head>
   <body>
+    <svg style="display: none">
+      <symbol id="close" viewBox="0 -960 960 960">
+        <path
+          d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+        ></path>
+      </symbol>
+    </svg>
     <header>
       <a href="../index.html" class="transition-link">
         <svg class="icon">
-          <use xlink:href="../images/sprite.svg#close"></use>
+          <use href="#close"></use>
         </svg>
       </a>
     </header>

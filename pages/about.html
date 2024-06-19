@@ -21,8 +21,17 @@
         <h1 id="logo">Drew Bae</h1>
       </a>
       <a href="./nav.html" class="transition-link">
+        <svg style="display: none">
+          <symbol id="hamburger-menu" viewBox="0 -960 960 960">
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            ></path>
+          </symbol>
+        </svg>
+
+        <!-- Use the inline SVG symbol -->
         <svg class="icon" id="navIcon">
-          <use xlink:href="../images/sprite.svg#hamburger-menu"></use>
+          <use href="#hamburger-menu"></use>
         </svg>
       </a>
       <div class="desktop-links">
@@ -85,15 +94,47 @@
             <div>
               <span class="circle-container">
                 <svg class="icon">
-                  <use xlink:href="../images/sprite.svg#graduation-cap"></use>
+                  <symbol
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 512"
+                    id="graduation-cap"
+                  >
+                    <path
+                      d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"
+                    ></path>
+                  </symbol>
+                  <use href="#graduation-cap"></use>
                 </svg>
               </span>
               <h2>Bachelor's of Science in Computer Science</h2>
             </div>
             <div style="background-color: #d2cff2">
               <span class="circle-container">
+                <!-- Inline the SVG symbol definition in your HTML file -->
+                <svg style="display: none">
+                  <symbol id="google" viewBox="0 0 48 48">
+                    <path
+                      fill="#FFC107"
+                      d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                    ></path>
+                    <path
+                      fill="#FF3D00"
+                      d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                    ></path>
+                    <path
+                      fill="#4CAF50"
+                      d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                    ></path>
+                    <path
+                      fill="#1976D2"
+                      d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                    ></path>
+                  </symbol>
+                </svg>
+
+                <!-- Use the inline SVG symbol -->
                 <svg class="icon">
-                  <use xlink:href="../images/sprite.svg#google"></use>
+                  <use href="#google"></use>
                 </svg>
               </span>
               <h2>Google's UX Design Professional Certificate</h2>
