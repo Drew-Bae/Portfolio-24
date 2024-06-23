@@ -397,11 +397,8 @@ h3 {
     }
 
     .desktop-contact-icons {
-        margin-left: 41px;
-        margin-bottom: 41px;
-
-        position: absolute;
-        bottom: 0;
+        margin-left: 35px;
+        margin-top: 41px;
 
         display: flex;
         flex-direction: row;
@@ -466,13 +463,11 @@ h3 {
 
     /* ---------- Main ---------- */
     main {
-        height: calc(100vh - 69px);
+        height: calc(100vh - 91.41px);
 
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-
-        margin: 0;
     }
 
     h1 {
@@ -503,12 +498,6 @@ h3 {
     }
 
     #rightSide {
-        height: calc(100vh - 69px);
-
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
         display: flex;
         align-items: center;
     }
